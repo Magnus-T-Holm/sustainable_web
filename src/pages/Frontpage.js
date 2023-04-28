@@ -1,17 +1,8 @@
-import Aside from "../components/Aside";
-
 const Frontpage = () => {
-  let isDanish;
-
-  if (localStorage.getItem("isDanish") === "true") {
-    isDanish = true
-  } else {
-    isDanish = false
-  }
-
   return (
     <main>
-      <Aside />
+      <h2>Velkommen til en guide til Sustainable Web</h2>
+      <p>På den her hjemmeside vil du finde en række forskelige gode råd til hvordan man designer på en sustainable og accessible måde.</p>
     </main >
   );
 };
