@@ -1,13 +1,14 @@
 import React from "react";
-import { NavHashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
-const Aside = () => {
+const Aside = ({ currentPage, sectionNames, sectionIds }) => {
+
   return (
     <aside>
       <ul>
-        <li><NavHashLink to="/sustainable-web/#home">Hjem</NavHashLink></li>
-        <li><NavHashLink to="/sustainable-web/#about">Om mig</NavHashLink></li>
-        <li><NavHashLink to="/sustainable-web/#projects">Projekter</NavHashLink></li>
+        {sectionNames.map(function (section, i) {
+          return <li key={i}><HashLink to={`${currentPage}#${sectionIds[i]}`} >{section}</HashLink></li>
+        })}
       </ul>
     </aside>
   );

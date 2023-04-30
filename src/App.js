@@ -13,6 +13,8 @@ import UpdateTitle from "./components/UpdateTitle";
 
 // ------------------------- Pages -------------------------
 import Frontpage from "./pages/Frontpage";
+import Sustainability from "./pages/Sustainability";
+import Accessibility from "./pages/Accessibility";
 
 
 import "./App.css";
@@ -26,6 +28,8 @@ function App() {
         <Header />
         <Routes>
           <Route path="/sustainable-web/" element={<Frontpage />} />
+          <Route path="/sustainable-web/sustainability" element={<Sustainability />} />
+          <Route path="/sustainable-web/accessibility" element={<Accessibility />} />
           <Route path="/sustainable-web/*" element={<Navigate to="/sustainable-web/" />} />
         </Routes>
         <Footer />

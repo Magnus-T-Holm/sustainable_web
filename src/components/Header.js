@@ -1,11 +1,10 @@
 import React from "react";
-import { NavHashLink } from 'react-router-hash-link';
-import $ from "jquery";
+import { NavLink, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  
+
   function mobileOpenClose() {
     let menu = document.querySelector("#mobile_overlay");
     let body = document.querySelector("body");
@@ -18,25 +17,15 @@ const Header = () => {
     }
   }
 
-  $(function () {
-    let current_page = window.location.pathname;
-    $('#desktop_header nav ul li a').each(function () {
-      let $this = $(this);
-      if ($this.attr('href').indexOf(current_page) !== -1) {
-        $this.addClass('current_page');
-      }
-    })
-  })
-
   return (
     <header>
       <div id="desktop_header">
         <h1>Sustainable Web</h1>
         <nav>
           <ul>
-            <li><a href="/sustainable-web" className="nav_tab">Home</a></li>
-            <li><a href="#" className="nav_tab">test</a></li>
-            <li><a href="#" className="nav_tab">test2</a></li>
+            <li><NavLink to="/sustainable-web" end className="nav_tab">Forside</NavLink></li>
+            <li><NavLink to="/sustainable-web/sustainability" className="nav_tab">Bæredygtighed</NavLink></li>
+            <li><NavLink to="/sustainable-web/accessibility" className="nav_tab">Accessibility</NavLink></li>
           </ul>
         </nav>
       </div>
@@ -48,13 +37,13 @@ const Header = () => {
         <div id="overlay_content">
           <ul>
             <li>
-              <NavHashLink to="/sustainable-web/#home" onClick={mobileOpenClose}>Hjem</NavHashLink>
+              <Link to="/sustainable-web" onClick={mobileOpenClose}>Forside</Link>
             </li>
             <li>
-              <NavHashLink to="/sustainable-web/#about" onClick={mobileOpenClose}>Om mig</NavHashLink>
+              <Link to="/sustainable-web/sustainability" onClick={mobileOpenClose}>Bæredygtighed</Link>
             </li>
             <li>
-              <NavHashLink to="/sustainable-web/#projects" onClick={mobileOpenClose}>Projekter</NavHashLink>
+              <Link to="/sustainable-web/accessibility" onClick={mobileOpenClose}>Accessibility</Link>
             </li>
           </ul>
         </div>
