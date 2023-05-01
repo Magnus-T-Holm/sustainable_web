@@ -5,8 +5,8 @@ export default function UpdateTitle() {
 
   const titles = {
     "/sustainable-web": "Sustainable Web",
-    "/sustainable-web/sustainability": "SW - Bæredygtighed",
-    "/sustainable-web/accessibility": "SW - Accessibility",
+    "/sustainable-web/sustainability": "Bæredygtighed - Sustainable Web",
+    "/sustainable-web/accessibility": "Accessibility - Sustainable Web",
   };
 
   const { pathname } = useLocation();
