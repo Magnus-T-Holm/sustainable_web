@@ -148,7 +148,7 @@ aside ul li a {
 main {
   background-color: var(--page);
   min-height: calc(100vh - 184px);
-  padding: 20px 0 0 265px;
+  padding: 20px 20px 0 265px;
 }
 
 main article {

@@ -7,6 +7,7 @@ export default function UpdateTitle() {
     "/sustainable-web": "Sustainable Web",
     "/sustainable-web/sustainability": "Bæredygtighed - Sustainable Web",
     "/sustainable-web/accessibility": "Accessibility - Sustainable Web",
+    "/sustainable-web/companies": "Virksomheder - Sustainable Web",
   };
 
   const { pathname } = useLocation();

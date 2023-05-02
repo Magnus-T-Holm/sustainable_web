@@ -26,6 +26,7 @@ const Header = () => {
             <li><NavLink to="/sustainable-web" end className="nav_tab">Forside</NavLink></li>
             <li><NavLink to="/sustainable-web/sustainability" className="nav_tab">Bæredygtighed</NavLink></li>
             <li><NavLink to="/sustainable-web/accessibility" className="nav_tab">Accessibility</NavLink></li>
+            <li><NavLink to="/sustainable-web/companies" className="nav_tab">Virksomheder</NavLink></li>
           </ul>
         </nav>
       </div>
@@ -45,6 +46,7 @@ const Header = () => {
             <li>
               <Link to="/sustainable-web/accessibility" onClick={mobileOpenClose}>Accessibility</Link>
             </li>
+            <li><Link to="/sustainable-web/companies" onClick={mobileOpenClose}>Virksomheder</Link></li>
           </ul>
         </div>
       </div>
