@@ -7,7 +7,12 @@ const Aside = ({ currentPage, sectionNames, sectionIds }) => {
     <aside>
       <ul>
         {sectionNames.map(function (section, i) {
-          return <li key={i}><HashLink to={`${currentPage}#${sectionIds[i]}`} >{section}</HashLink></li>
+          if (section === 'Bæredygtighed' || section === 'Accessibility') {
+            return <li key={i}><HashLink to={`${currentPage}#${sectionIds[i]}`} >{section}</HashLink></li>
+
+          } else {
+            return <li key={i} className="subsection"><HashLink to={`${currentPage}#${sectionIds[i]}`} >{section}</HashLink></li>
+          }
         })}
       </ul>
     </aside>

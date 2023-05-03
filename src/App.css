@@ -39,6 +39,7 @@ header {
 #desktop_header h1 {
   margin-bottom: 56px;
   color: whitesmoke;
+  font-size: 52px;
 }
 
 #desktop_header nav {
@@ -53,7 +54,7 @@ header {
 .nav_tab {
   display: block;
   background-color: var(--page_not_selected);
-  font-size: larger;
+  font-size: 26px;
   color: black;
   text-decoration: none;
   padding: 15px 30px;
@@ -93,7 +94,7 @@ header {
   z-index: 1;
   left: 0;
   top: 0;
-  background-color: rgba(77, 77, 77, 0.97);
+  background-color: rgba(115, 96, 73, 0.97);
   overflow-x: hidden;
   transition: 0.5s;
 }
@@ -112,7 +113,12 @@ header {
   align-items: center;
   position: relative;
   top: 20%;
-  text-align: center;
+}
+
+#overlay_content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 /*-------------------------------- Pages --------------------------------*/
@@ -120,7 +126,7 @@ header {
 /*----------- Aside -----------*/
 aside {
   position: fixed;
-  top: 184px;
+  top: 238px;
   left: 0;
   background-color: var(--aside);
   color: black;
@@ -135,20 +141,32 @@ aside ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 24px;
 }
 
 aside ul li a {
   color: black;
   text-decoration: none;
-  font-size: xx-large;
+  font-size: 32px;
+}
+
+.subsection {
+  margin-left: 24px;
+}
+
+.subsection a {
+  font-size: 28px;
 }
 
 /*----------- Main -----------*/
 main {
   background-color: var(--page);
-  min-height: calc(100vh - 184px);
-  padding: 20px 20px 0 265px;
+  padding: 20px 20px 50px 265px;
+}
+
+.no_aside {
+  min-height: calc(100vh - 238px);
+  padding: 20px 80px 0;
 }
 
 main article {
@@ -157,13 +175,50 @@ main article {
   gap: 30px;
 }
 
-/*-------------------------------- Footer --------------------------------*/
-footer {
+.frontpage h2 {
+  text-align: center;
+}
+
+article h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+article h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+article p {
+  font-size: 24px;
+  line-height: 2;
+  margin-bottom: 25px;
+}
+
+section {
   display: flex;
-  background-color: var(--header_footer);
-  padding: 10px;
-  color: white;
-  font-size: x-large;
+  flex-direction: column;
+}
+
+section ul {
+  margin-left: 20px;
+  list-style: disc;
+  margin-bottom: 25px;
+}
+
+section ul li {
+  font-size: 24px;
+  line-height: 2;
+}
+
+section img {
+  width: 75%;
+  min-width: 450px;
+}
+
+section a {
+  color: var(--text);
+  font-weight: bold;
 }
 
 /*-------------------------------- Media queries --------------------------------*/
@@ -171,10 +226,6 @@ footer {
 @media screen and (max-width: 768px) {
   header {
     position: fixed;
-  }
-
-  main {
-    margin-top: 82px;
   }
 
   #desktop_header {
@@ -185,7 +236,36 @@ footer {
     display: flex;
   }
 
+  main {
+    margin-top: 82px;
+    padding: 20px 0 0;
+  }
+
+  h2,
+  h3,
+  p {
+    padding: 0 20px;
+  }
+
   aside {
     display: none;
+  }
+
+  .no_aside {
+    min-height: calc(100vh - 82px);
+  }
+
+  section img {
+    width: 100%;
+    min-width: 0;
+    max-width: 500px;
+    align-self: center;
+  }
+
+  section ul {
+    margin-left: 40px;
+    list-style: disc;
+    margin-bottom: 25px;
+    padding-right: 30px;
   }
 }

@@ -7,14 +7,12 @@ import {
 
 // ------------------------- Univesal -------------------------
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop"
 import UpdateTitle from "./components/UpdateTitle";
 
 // ------------------------- Pages -------------------------
 import Frontpage from "./pages/Frontpage";
-import Sustainability from "./pages/Sustainability";
-import Accessibility from "./pages/Accessibility";
+import SustainabilityAccessibility from "./pages/SustainabilityAccessibility";
 import Companies from "./pages/Companies";
 
 
@@ -29,12 +27,10 @@ function App() {
         <Header />
         <Routes>
           <Route path="/sustainable-web/" element={<Frontpage />} />
-          <Route path="/sustainable-web/sustainability" element={<Sustainability />} />
-          <Route path="/sustainable-web/accessibility" element={<Accessibility />} />
+          <Route path="/sustainable-web/sustainability-og-accessibility" element={<SustainabilityAccessibility />} />
           <Route path="/sustainable-web/companies" element={<Companies />} />
           <Route path="/sustainable-web/*" element={<Navigate to="/sustainable-web/" />} />
         </Routes>
-        <Footer />
       </BrowserRouter>
     </div>
   );

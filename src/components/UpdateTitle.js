@@ -4,9 +4,8 @@ import { useLocation } from "react-router-dom";
 export default function UpdateTitle() {
 
   const titles = {
-    "/sustainable-web": "Sustainable Web",
-    "/sustainable-web/sustainability": "Bæredygtighed - Sustainable Web",
-    "/sustainable-web/accessibility": "Accessibility - Sustainable Web",
+    "/sustainable-web/": "Sustainable Web",
+    "/sustainable-web/sustainability-og-accessibility": "Bæredygtighed & Accessibility - Sustainable Web",
     "/sustainable-web/companies": "Virksomheder - Sustainable Web",
   };
 

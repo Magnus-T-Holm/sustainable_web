@@ -23,9 +23,8 @@ const Header = () => {
         <h1>Sustainable Web</h1>
         <nav>
           <ul>
-            <li><NavLink to="/sustainable-web" end className="nav_tab">Forside</NavLink></li>
-            <li><NavLink to="/sustainable-web/sustainability" className="nav_tab">Bæredygtighed</NavLink></li>
-            <li><NavLink to="/sustainable-web/accessibility" className="nav_tab">Accessibility</NavLink></li>
+            <li><NavLink to="/sustainable-web/" end className="nav_tab">Forside</NavLink></li>
+            <li><NavLink to="/sustainable-web/sustainability-og-accessibility" className="nav_tab">Bæredygtighed & Accessibility</NavLink></li>
             <li><NavLink to="/sustainable-web/companies" className="nav_tab">Virksomheder</NavLink></li>
           </ul>
         </nav>
@@ -38,13 +37,10 @@ const Header = () => {
         <div id="overlay_content">
           <ul>
             <li>
-              <Link to="/sustainable-web" onClick={mobileOpenClose}>Forside</Link>
+              <Link to="/sustainable-web/" onClick={mobileOpenClose}>Forside</Link>
             </li>
             <li>
-              <Link to="/sustainable-web/sustainability" onClick={mobileOpenClose}>Bæredygtighed</Link>
-            </li>
-            <li>
-              <Link to="/sustainable-web/accessibility" onClick={mobileOpenClose}>Accessibility</Link>
+              <Link to="/sustainable-web/sustainability-og-accessibility" onClick={mobileOpenClose}>Bæredygtighed & Accessibility</Link>
             </li>
             <li><Link to="/sustainable-web/companies" onClick={mobileOpenClose}>Virksomheder</Link></li>
           </ul>
